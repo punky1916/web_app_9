@@ -50,7 +50,7 @@
                 {% for category in categories %}
                 
                 <li>
-                  <a href="categories.html" class="nav-link text-left">{{ category.title }}</a>
+                  <a href="{% url 'category_news' category_id=category.id %}" class="nav-link text-left">{{ category.title }}</a>
                 </li>
                 {% endfor %}
                 <li><a href="contact.html" class="nav-link text-left">Contact</a></li>
