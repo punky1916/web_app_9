@@ -17,7 +17,12 @@ class CategoryNewsView(View):
         # category = Category.objects.get(pk=category_id)
         category = get_object_or_404(Category, pk=category_id)
         category_news_list = News.objects.filter(category=category)
-        return render(request, template_name, {"category_news_list": category_news_list})
+        return render(
+            request, template_name, {"category_news_list": category_news_list, "category": category}
+        )
 
-    # def post(self, request, *args, **kwargs):
-    #     return HttpResponse('POST request!')
+
+# class CategoryNewsView(ListView):
+#     model = News
+#     context_object_name = "category_news_list"
+#     template_name = "news/categories.html"
