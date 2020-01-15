@@ -21,7 +21,21 @@ Start django proect:
 django-admin startproject news_portal . 
 ("." is used for current directory)
 
+#To create a app
+python manage.py startapp app_name
 
+Migration related Commands
+
+python manage.py makemigrations # if new models is created or have changes in existing models
+python manage.py migrate # to migrate model in physical database
+
+To see migrated sql queries
+python manage.py sqlmigrate app_name prefix_of_file_name
+example:
+python manage.py sqlmigrate auth 0001
+
+To create Super user:
+python manage.py createsuperuser
 
 GIT Commands
 
