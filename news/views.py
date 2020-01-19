@@ -42,7 +42,6 @@ class NewsTemplateView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         categories = Category.objects.all()
-        print(categories)
         category_news_list = {}
         for category in categories:
             # context[category.title] = News.objects.filter(category=category)
@@ -50,7 +49,6 @@ class NewsTemplateView(TemplateView):
         context["news_list"] = News.objects.all().order_by("-created_at")[:4]
         context["trending_news"] = News.objects.order_by("-count")
         context["category_news_list"] = category_news_list
-        print(context)
         return context
 
 
