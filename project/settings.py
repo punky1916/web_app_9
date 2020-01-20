@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # third party
+    "crispy_forms",
     # custom app
     "news",
 ]
@@ -128,3 +130,7 @@ EMAIL_HOST = "smtp.mailtrap.io"
 EMAIL_HOST_USER = "c69c4714a602d0"
 EMAIL_HOST_PASSWORD = "bbe0cd40a824a9"
 EMAIL_PORT = "2525"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+LOGIN_REDIRECT_URL = "/"

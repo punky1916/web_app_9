@@ -16,9 +16,9 @@
               <a href="#" class="d-inline-block p-3"><span class="icon-facebook"></span></a>
                 <a href="#" class="d-inline-block p-3"><span class="icon-twitter"></span></a>
                 <a href="#" class="d-inline-block p-3"><span class="icon-instagram"></span></a>
-                <a href="#" class="d-inline-block p-3"><span >Login</span></a>
+                <a href="{% url 'login' %}" class="d-inline-block p-3"><span >Login</span></a>
                 <a href="{% url 'user_register' %}" class="d-inline-block p-3"><span >Signup</span></a>
-                <a href="#" class="d-inline-block p-3"><span >Logout</span></a>
+                <a href="{% url 'logout' %}" class="d-inline-block p-3"><span >Logout</span></a>
             </div>
             <form action="#" class="search-form d-inline-block">
 
